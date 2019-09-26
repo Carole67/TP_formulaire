@@ -1,38 +1,116 @@
 <!doctype html>
 <html lang="fr">
+
 <head>
-  <meta charset="utf-8">
-  <title>Formulaire</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <title>Formulaire</title>
+    <!-- Responsive -->
+    <meta name="viewport" content="wnameth=device-wnameth, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- My CSS -->
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+
 </head>
+
 <body>
-<form>
-<p>
-    <label>Nom :</label>
-    <input type="text"></input>
-    <br>
-    <label>Prénom : </label>
-    <input type="text"></input>
-    <label>Adresse :</label>
-    <input></input>
-    <label>Code postale :</label>
-    <input></input>
-    <label>Ville :</label>
-    <input></input>
-    <label>Téléphone : </label>
-    <input type="tel"></input>
-    <label>Email :</label>
-    <input></input>
-    <label>Civilité :</label>
-    <input></input>
-    <label>Password :</label>
-    <input></input>
-    <label>Login :</label>
-    <input></input>
-    </p>
-</form>
+    <header>
+
+    </header>
+    <main>
+
+
+        <div class="container">
+            <h2 class="text-center">Formulaire client</h2>
+
+            <div class="card">
+                <div class="card-body">
+                    <form id="form_client">
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <div class="form-check form-check-inline">
+                                    <legend class="col-form-label">Civilité</legend>
+                                </div>
+                                <div class="form-check form-check-inline">
+
+                                    <input class="form-check-input" type="radio" name="civilite" checked /><label class="form-check-label">Monsieur</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="civilite" /><label class="form-check-label">Madame</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="nom">Nom</label>
+                                <input class="form-control" type="text" name="nom"></input>
+                            </div>
+
+                            <div class="col-sm">
+                                <label for="prenom">Prénom</label>
+                                <input class="form-control" type="text" name="prenom"></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="adr">Adresse</label>
+                                <input class="form-control" type="text" name="adr"></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="cp">Code postal</label>
+                                <input class="form-control" type="number" name="cp"></input>
+                            </div>
+                            <div class="col-sm">
+                                <label for="ville">Ville</label>
+                                <input class="form-control" type="text" name="ville"></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="tel">Téléphone</label>
+                                <input class="form-control" type="tel" name="tel"></input>
+                            </div>
+                            <div class="col-sm">
+                                <label for="mail">Email</label>
+                                <input class="form-control" type="email" name="mail"></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <label for="login">Login</label>
+                                <input class="form-control" type="text" name="login"></input>
+                            </div>
+                            <div class="col-sm">
+                                <label for="pwd">Password</label>
+                                <input class="form-control" type="password" name="pwd"></input>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm">
+                                <button class="btn btn-primary" type="submit">Go !</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- JQuery -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+
+        <!-- JQuery Validator-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+
+        <!-- JS -->
+        <script src="global.js"></script>
+
+    </footer>
+
 </body>
+
 </html>
