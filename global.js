@@ -101,9 +101,10 @@ $(document).ready(function() {
                 break;
             case '#login':
                 showToast(!checkLogin($(idInput).val()), idToast);
+                break;
             case '#pwd':
                 showToast(!checkPassword($(idInput).val()), idToast);
-
+                break;
             default:
                 break;
         }
