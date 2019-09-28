@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!-- My CSS -->
-    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <!--<link rel="stylesheet" type="text/less" href="style.less">-->
+
+    <!-- Less -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
 
 </head>
 
@@ -20,81 +24,126 @@
 
     </header>
     <main>
+        <div class="jumbotron vertical-center">
+            <div class="container">
+                <!--Titre-->
+                <h2 class="text-center font-weight-bold">Formulaire client</h2>
 
-
-        <div class="container">
-            <h2 class="text-center">Formulaire client</h2>
-
-            <div class="card">
-                <div class="card-body">
-                    <form id="form_client">
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <div class="form-check form-check-inline">
-                                    <legend class="col-form-label">Civilité</legend>
-                                </div>
-                                <div class="form-check form-check-inline">
-
-                                    <input class="form-check-input" type="radio" name="civilite" checked /><label class="form-check-label">Monsieur</label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" name="civilite" /><label class="form-check-label">Madame</label>
+                <div class="card">
+                    <div class="card-body">
+                        <!--Formulaire-->
+                        <form id="form_client">
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="nom">Civilité</label>
                                 </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <label for="nom">Nom</label>
-                                <input class="form-control" type="text" name="nom"></input>
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="civilite" checked /><label class="form-check-label">Monsieur</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="civilite" /><label class="form-check-label">Madame</label>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col-sm">
-                                <label for="prenom">Prénom</label>
-                                <input class="form-control" type="text" name="prenom"></input>
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="nom">Nom</label>
+                                    <input class="form-control" type="text" id="nom"></input>
+
+                                    <div id="error-nom" class="toast-body">
+                                        Nom requis
+                                    </div>
+                                </div>
+
+                                <div class="col-sm">
+                                    <label for="prenom">Prénom</label>
+                                    <input class="form-control" type="text" id="prenom"></input>
+                                    <div id="error-prenom" class="toast-body">
+                                        Prénom requis
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <label for="adr">Adresse</label>
-                                <input class="form-control" type="text" name="adr"></input>
+
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="adr">Adresse</label>
+                                    <input class="form-control" type="text" id="adr"></input>
+                                    <div id="error-adr" class="toast-body">
+                                        Adresse requise
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <label for="cp">Code postal</label>
-                                <input class="form-control" type="number" name="cp"></input>
+
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="cp">Code postal</label>
+                                    <input class="form-control" type="text" id="cp"></input>
+                                    <div id="error-cp" class="toast-body">
+                                        Code postal invalide ( 5 chiffres)
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="ville">Ville</label>
+                                    <input class="form-control" type="text" id="ville"></input>
+                                    <div id="error-ville" class="toast-body">
+                                        Ville requise
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <label for="ville">Ville</label>
-                                <input class="form-control" type="text" name="ville"></input>
+
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="tel">Téléphone</label>
+                                    <input class="form-control" type="tel" id="tel"></input>
+                                    <div id="error-tel" class="toast-body">
+                                        Téléphone invalide
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="mail">Email</label>
+                                    <input class="form-control" type="email" id="mail"></input>
+                                    <div id="error-mail" class="toast-body">
+                                        Email invalide
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <label for="tel">Téléphone</label>
-                                <input class="form-control" type="tel" name="tel"></input>
+
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="login">Login</label>
+                                    <input class="form-control" type="text" id="login"></input>
+                                    <div id="error-login" class="toast-body">
+                                        Login requis
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col-sm">
-                                <label for="mail">Email</label>
-                                <input class="form-control" type="email" name="mail"></input>
+                            <div class="form-group row">
+                                <div class="col-sm">
+                                    <label for="pwd">Mot de passe</label>
+                                    <input class="form-control" type="password" id="pwd"></input>
+                                    <div id="error-pwd" class="toast-body">
+                                        Mot de passe requis (doit contenir 8 caractères : majuscules, minuscules, caractères spéciaux )
+                                    </div>
+                                </div>
+                                <div class="col-sm">
+                                    <label for="pwd">Confirmation du mot de passe</label>
+                                    <input class="form-control" type="password" id="pwd_confirm"></input>
+                                    <div id="error-pwd-confirm" class="toast-body">
+                                        Mot de passe invalide
+                                    </div>
+                                </div>
+
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <label for="login">Login</label>
-                                <input class="form-control" type="text" name="login"></input>
+
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-lg" type="submit" id="btn_submit">Go !</button>
                             </div>
-                            <div class="col-sm">
-                                <label for="pwd">Password</label>
-                                <input class="form-control" type="password" name="pwd"></input>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm">
-                                <button class="btn btn-primary" type="submit">Go !</button>
-                            </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,14 +152,11 @@
         <!-- JQuery -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
 
-        <!-- JQuery Validator-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <!-- JS -->
-        <script src="global.js"></script>
+        <script type="text/javascript" src="global.js"></script>
 
     </footer>
-
 </body>
 
 </html>
